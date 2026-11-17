@@ -1,0 +1,6 @@
+{
+  "name": "Harmonia Studio DAW",
+  "description": "תוכנת הפקה, עריכה ויצירת מוזיקה מתקדמת עם תמיכה מלאה ב-Akai LPK25 MIDI, פלאגינים, ספריית דגימות וייצוא רב-פורמטי.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": []
+}

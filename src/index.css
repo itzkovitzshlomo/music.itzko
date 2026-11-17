@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Heebo', 'Inter', system-ui, -apple-system, sans-serif;
+    --font-display: 'Inter', 'Heebo', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+    --bg: #FFFDF0;
+    --ink: #333333;
+    --accent: #7B61FF;
+    --soft-pink: #FFD6E8;
+    --soft-blue: #D6E4FF;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg);
+    color: var(--ink);
+    user-select: none;
+  }
+
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Playful Canvas scrollbars */
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #FFFDF0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #D6D2BE;
+    border-radius: 999px;
+    border: 1.5px solid #FFFDF0;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #333333;
+  }
+}
+
+/* Neo-brutalist studio sliders */
+input[type="range"].studio-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"].studio-slider::-webkit-slider-runnable-track {
+  height: 8px;
+  background: #EEECE0;
+  border-radius: 999px;
+  border: 1.5px solid #333333;
+}
+
+input[type="range"].studio-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #7B61FF;
+  border: 2px solid #333333;
+  margin-top: -4.5px;
+  transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1), background-color 140ms ease;
+}
+
+input[type="range"].studio-slider:hover::-webkit-slider-thumb {
+  background: #FFD6E8;
+  transform: scale(1.12);
+}
+
+/* Vertical mixer fader */
+input[type="range"].mixer-fader {
+  -webkit-appearance: none;
+  appearance: none;
+  writing-mode: vertical-lr;
+  direction: rtl;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"].mixer-fader::-webkit-slider-runnable-track {
+  width: 8px;
+  background: #EEECE0;
+  border-radius: 999px;
+  border: 1.5px solid #333333;
+}
+
+input[type="range"].mixer-fader::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 12px;
+  border-radius: 6px;
+  background: #FFFFFF;
+  border: 2px solid #333333;
+  box-shadow: 2px 2px 0 #333333;
+  margin-left: -8.5px;
+  transition: background-color 140ms ease;
+}
+
+input[type="range"].mixer-fader:hover::-webkit-slider-thumb {
+  background: #7B61FF;
+}
